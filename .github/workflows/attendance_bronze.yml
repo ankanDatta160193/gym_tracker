@@ -1,0 +1,32 @@
+name: Attendance Bronze Refresh
+
+on:
+  schedule:
+    - cron: "30 18 * * *"   # 12:00 AM IST (UTC+5:30)
+  workflow_dispatch:
+
+jobs:
+  run-bronze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Databricks Job
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          NOTEBOOK_PATH: ${{ secrets.DATABRICKS_NOTEBOOK_PATH }}
+        run: |
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "run_name": "attendance_bronze_refresh",
+            "tasks": [
+              {
+                "task_key": "bronze",
+                "notebook_task": {
+                  "notebook_path": "'"$NOTEBOOK_PATH"'"
+                }
+              }
+            ]
+          }'
