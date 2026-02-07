@@ -1,20 +1,20 @@
-name: Attendance Bronze Refresh
+name: Gym Bronze Refresh
 
 on:
   schedule:
-    - cron: "30 * * * *"   # every hour at minute 30 (UTC)
+    - cron: "0 * * * *"   # every hour (UTC)
   workflow_dispatch:
 
 jobs:
-  run-bronze:
+  attendance-bronze:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Databricks Job
+      - name: Trigger Attendance Bronze Job
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          NOTEBOOK_PATH: ${{ secrets.DATABRICKS_NOTEBOOK_PATH }}
+          NOTEBOOK_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
         run: |
           curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
           -H "Authorization: Bearer $DATABRICKS_TOKEN" \
@@ -23,7 +23,7 @@ jobs:
             "run_name": "attendance_bronze_refresh",
             "tasks": [
               {
-                "task_key": "bronze",
+                "task_key": "attendance_bronze",
                 "notebook_task": {
                   "notebook_path": "'"$NOTEBOOK_PATH"'"
                 }
@@ -31,10 +31,42 @@ jobs:
             ]
           }'
 
-      - name: Notify success
-        if: success()
-        run: echo "Attendance Bronze Refresh SUCCEEDED"
+  workouts-bronze:
+    runs-on: ubuntu-latest
+    needs: attendance-bronze
 
-      - name: Notify failure
-        if: failure()
-        run: echo "Attendance Bronze Refresh FAILED"
+    steps:
+      - name: Trigger Workouts Bronze Job
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          NOTEBOOK_PATH: ${{ secrets.WORKOUTS_BRONZE_NOTEBOOK_PATH }}
+        run: |
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "run_name": "workouts_bronze_refresh",
+            "tasks": [
+              {
+                "task_key": "workouts_bronze",
+                "notebook_task": {
+                  "notebook_path": "'"$NOTEBOOK_PATH"'"
+                }
+              }
+            ]
+          }'
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [attendance-bronze, workouts-bronze]
+    if: always()
+
+    steps:
+      - name: Notify Success
+        if: ${{ success() }}
+        run: echo "Gym bronze pipelines succeeded"
+
+      - name: Notify Failure
+        if: ${{ failure() }}
+        run: echo "Gym bronze pipelines failed"
