@@ -15,7 +15,6 @@ jobs:
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          DATABRICKS_CLUSTER_ID: ${{ secrets.DATABRICKS_CLUSTER_ID }}
           ATTENDANCE_BRONZE_NOTEBOOK_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
         run: |
           curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
@@ -25,8 +24,7 @@ jobs:
             "run_name": "attendance_bronze_refresh",
             "tasks": [
               {
-                "task_key": "attendance",
-                "existing_cluster_id": "'"$DATABRICKS_CLUSTER_ID"'",
+                "task_key": "attendance_bronze",
                 "notebook_task": {
                   "notebook_path": "'"$ATTENDANCE_BRONZE_NOTEBOOK_PATH"'"
                 }
@@ -43,7 +41,6 @@ jobs:
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          DATABRICKS_CLUSTER_ID: ${{ secrets.DATABRICKS_CLUSTER_ID }}
           WORKOUTS_BRONZE_NOTEBOOK_PATH: ${{ secrets.WORKOUTS_BRONZE_NOTEBOOK_PATH }}
         run: |
           curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
@@ -53,8 +50,7 @@ jobs:
             "run_name": "workouts_bronze_refresh",
             "tasks": [
               {
-                "task_key": "workouts",
-                "existing_cluster_id": "'"$DATABRICKS_CLUSTER_ID"'",
+                "task_key": "workouts_bronze",
                 "notebook_task": {
                   "notebook_path": "'"$WORKOUTS_BRONZE_NOTEBOOK_PATH"'"
                 }
