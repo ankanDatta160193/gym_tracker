@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  attendance-bronze:
+  run-bronze:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,37 +31,10 @@ jobs:
             ]
           }'
 
-  workouts-bronze:
-    runs-on: ubuntu-latest
-    needs: attendance-bronze
-
-    steps:
-      - name: Trigger Workouts Bronze Job
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          NOTEBOOK_PATH: ${{ secrets.WORKOUTS_BRONZE_NOTEBOOK_PATH }}
-        run: |
-          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
-          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d '{
-            "run_name": "workouts_bronze_refresh",
-            "tasks": [
-              {
-                "task_key": "workouts_bronze",
-                "notebook_task": {
-                  "notebook_path": "'"$NOTEBOOK_PATH"'"
-                }
-              }
-            ]
-          }'
-
   notify:
     runs-on: ubuntu-latest
-    needs: [attendance-bronze, workouts-bronze]
+    needs: [run-bronze]
     if: always()
-
     steps:
       - name: Notify Success
         if: ${{ success() }}
