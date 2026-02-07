@@ -1,80 +1,84 @@
-name: Attendance Bronze Refresh
+name: Gym Bronze Refresh
 
 on:
   schedule:
-    - cron: "0 * * * *"   # every hour (UTC)
+    - cron: "0 * * * *"   # every hour
   workflow_dispatch:
 
 jobs:
-  run-bronze:
+
+  attendance-bronze:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Databricks Bronze Jobs
+      - name: Trigger Attendance Bronze
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_CLUSTER_ID: ${{ secrets.DATABRICKS_CLUSTER_ID }}
           ATTENDANCE_BRONZE_NOTEBOOK_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
-          WORKOUTS_BRONZE_NOTEBOOK_PATH: ${{ secrets.WORKOUTS_BRONZE_NOTEBOOK_PATH }}
         run: |
-          RESPONSE=$(curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
           -H "Authorization: Bearer $DATABRICKS_TOKEN" \
           -H "Content-Type: application/json" \
           -d '{
-            "run_name": "gym_bronze_refresh",
+            "run_name": "attendance_bronze_refresh",
             "tasks": [
               {
-                "task_key": "attendance_bronze",
+                "task_key": "attendance",
                 "existing_cluster_id": "'"$DATABRICKS_CLUSTER_ID"'",
                 "notebook_task": {
                   "notebook_path": "'"$ATTENDANCE_BRONZE_NOTEBOOK_PATH"'"
                 }
-              },
+              }
+            ]
+          }'
+
+
+  workouts-bronze:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Workouts Bronze
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_CLUSTER_ID: ${{ secrets.DATABRICKS_CLUSTER_ID }}
+          WORKOUTS_BRONZE_NOTEBOOK_PATH: ${{ secrets.WORKOUTS_BRONZE_NOTEBOOK_PATH }}
+        run: |
+          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "run_name": "workouts_bronze_refresh",
+            "tasks": [
               {
-                "task_key": "workouts_bronze",
+                "task_key": "workouts",
                 "existing_cluster_id": "'"$DATABRICKS_CLUSTER_ID"'",
                 "notebook_task": {
                   "notebook_path": "'"$WORKOUTS_BRONZE_NOTEBOOK_PATH"'"
                 }
               }
             ]
-          }')
+          }'
 
-          echo "$RESPONSE"
-          RUN_ID=$(echo "$RESPONSE" | jq -r '.run_id')
 
-          if [ "$RUN_ID" = "null" ]; then
-            echo "Failed to submit Databricks job"
-            exit 1
-          fi
+  notify:
+    runs-on: ubuntu-latest
 
-          echo "Databricks run_id=$RUN_ID"
+    needs: [attendance-bronze, workouts-bronze]
 
+    if: always()
+
+    steps:
       - name: Notify Success
-        if: success()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Gym Bronze Workflow SUCCESS"
-          body: "Gym bronze workflow ran successfully."
-          to: |
-            dattaankan74@gmail.com
-          from: GitHub Actions
+        if: ${{ success() }}
+        run: echo "Gym bronze pipelines succeeded"
+
+      - name: Notify failure
+        if: failure()
+        run: echo "Attendance Bronze Refresh FAILED"
 
       - name: Notify Failure
-        if: failure()
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "Gym Bronze Workflow FAILED"
-          body: "Gym bronze workflow failed. Check Databricks job runs."
-          to: |
-            dattaankan74@gmail.com
-          from: GitHub Actions
+        if: ${{ failure() }}
+        run: echo "Gym bronze pipelines failed"
