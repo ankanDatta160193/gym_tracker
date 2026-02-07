@@ -2,7 +2,7 @@ name: Attendance Bronze Refresh
 
 on:
   schedule:
-    - cron: "30 18 * * *"   # 12:00 AM IST (UTC+5:30)
+    - cron: "30 * * * *"   # every hour at minute 30 (UTC)
   workflow_dispatch:
 
 jobs:
@@ -30,3 +30,11 @@ jobs:
               }
             ]
           }'
+
+      - name: Notify success
+        if: success()
+        run: echo "Attendance Bronze Refresh SUCCEEDED"
+
+      - name: Notify failure
+        if: failure()
+        run: echo "Attendance Bronze Refresh FAILED"
