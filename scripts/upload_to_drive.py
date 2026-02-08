@@ -5,7 +5,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 SERVICE_JSON = json.loads(os.environ["GOOGLE_DRIVE_CREDENTIALS"])
-FOLDER_ID = os.environ["GDRIVE_FOLDER_ID"]
+FOLDER_ID = os.environ["GOOGLE_DRIVE_FOLDER_ID"]
 
 creds = Credentials.from_service_account_info(
     SERVICE_JSON,
