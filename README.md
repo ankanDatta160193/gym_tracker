@@ -153,9 +153,9 @@ Google Sheets consumes the exported CSV directly from GitHub using:
 
 - API-based ingestion instead of CSV exports
 
-- Author Notes
+# Author Notes
 
-# Built as a personal data engineering project to demonstrate:
+Built as a personal data engineering project to demonstrate:
 
 - Medallion architecture
 
