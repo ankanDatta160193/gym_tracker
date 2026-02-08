@@ -1,37 +1,37 @@
-Date,Day,Type,Exercise,set_1,set_2,set_3,set_4,Weight,total_reps,Present,bodyweight
-2026-02-01,sunday,H,H,,,,,,0.0,H,
-2026-02-02,monday,Back,Pullups,6.0,6.0,3.0,3.0,79.05,18.0,Y,79.05
-2026-02-02,monday ,Back,LatPullDowns,15.0,15.0,15.0,5.0,"23,36,43,50",50.0,Y,79.05
-2026-02-02,monday,Back ,LatPullDowns shorter grip ,15.0,8.0,8.0,5.0,"23,36,43,50",36.0,Y,79.05
-2026-02-02,monday ,Back,Seated Row,15.0,10.0,12.0,5.0,"23,29,36,43",42.0,Y,79.05
-2026-02-02,monday,Back,Seated Row Machine ,12.0,15.0,15.0,,"7.5,7.5,7.5",42.0,Y,79.05
-2026-02-02,monday,Back,LatPullDowns shortest grip ,,,,,,0.0,Y,79.05
-2026-02-02,monday,Back,Seated Row Shortest grip ,,,,,,0.0,Y,79.05
-2026-02-02,monday ,Back,Bent Over Rows,15.0,15.0,15.0,,79.05,45.0,Y,79.05
-2026-02-02,monday ,Biceps ,Bicep Curl,15.0,15.0,10.0,,"23,23,23",40.0,Y,79.05
-2026-02-02,monday,Biceps ,Hammer Curl,15.0,10.0,8.0,,"5,7.5,10",33.0,Y,79.05
-2026-02-02,monday,Biceps,Bicep Curl with bent bar,,,,,,0.0,Y,79.05
-2026-02-02,monday ,Biceps,21 exercise ,21.0,21.0,21.0,,"4.5,6.8,9.1",63.0,Y,79.05
-2026-02-02,monday,Back,Deadlift ,,,,,,0.0,Y,79.05
-2026-02-02,monday ,Abs,Upper,,,,,,0.0,Y,79.05
-2026-02-02,monday ,Abs,Mid,,,,,,0.0,Y,79.05
-2026-02-02,monday ,Abs,Side,,,,,,0.0,Y,79.05
-2026-02-02,monday ,Abs,Lower,,,,,,0.0,Y,79.05
-2026-02-03,tuesday,N,N,,,,,,0.0,N,
-2026-02-04,wednesday ,Triceps ,Extension ,20.0,20.0,20.0,15.0,,75.0,Y,
-2026-02-05,thursday,N,N,,,,,,0.0,N,
-2026-02-04,wednesday ,Triceps ,Extension From Baxk,20.0,20.0,10.0,10.0,,60.0,Y,
-2026-02-04,wednesday ,Chest,Bench Press,15.0,20.0,15.0,10.0,,60.0,Y,
-2026-02-04,wednesday ,Chest,Inclined Bench Press ,10.0,10.0,8.0,8.0,,36.0,Y,
-2026-02-04,wednesday ,Chest,Fly ,15.0,15.0,10.0,8.0,,48.0,Y,
-2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,15.0,15.0,15.0,11.0,,56.0,Y,
-2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,12.0,10.0,12.0,10.0,,44.0,Y,
-2026-02-06,friday,Legs,free squats ,15.0,15.0,15.0,15.0,79.75,60.0,Y,79.75
-2026-02-06,friday,Legs,Barbell Squats,8.0,10.0,8.0,,"10,10,10",26.0,Y,79.75
-2026-02-06,friday ,Legs,Leg Press,12.0,15.0,12.0,15.0,"25,25,25,25",54.0,Y,79.75
-2026-02-06,friday,Legs,Leg Extension down,15.0,15.0,15.0,,"43,50,58",45.0,Y,79.75
-2026-02-06,friday,Legs,Leg Extension Up,12.0,12.0,12.0,,"43,50,57",36.0,Y,79.75
-2026-02-06,friday,Legs,Hip Abductor ,20.0,20.0,12.0,,"29,36,50",52.0,Y,79.75
-2026-02-06,friday,Legs,Calf Raises,15.0,15.0,20.0,,"5,30,30",50.0,Y,79.75
-2026-02-07,saturday,N,N,,,,,,0.0,N,
-2026-02-08,sunday,H,H,,,,,,0.0,H,
+Date,Day,Type,Exercise,set_1,set_2,set_3,set_4,Weight,total_reps,Present,bodyweight,fees_yearly
+2026-02-01,sunday,H,H,,,,,,0.0,H,,7500.0
+2026-02-02,monday,Back,Pullups,6.0,6.0,3.0,3.0,79.05,18.0,Y,79.05,7500.0
+2026-02-02,monday ,Back,LatPullDowns,15.0,15.0,15.0,5.0,"23,36,43,50",50.0,Y,79.05,7500.0
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,15.0,8.0,8.0,5.0,"23,36,43,50",36.0,Y,79.05,7500.0
+2026-02-02,monday ,Back,Seated Row,15.0,10.0,12.0,5.0,"23,29,36,43",42.0,Y,79.05,7500.0
+2026-02-02,monday,Back,Seated Row Machine ,12.0,15.0,15.0,,"7.5,7.5,7.5",42.0,Y,79.05,7500.0
+2026-02-02,monday,Back,LatPullDowns shortest grip ,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday,Back,Seated Row Shortest grip ,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday ,Back,Bent Over Rows,15.0,15.0,15.0,,79.05,45.0,Y,79.05,7500.0
+2026-02-02,monday ,Biceps ,Bicep Curl,15.0,15.0,10.0,,"23,23,23",40.0,Y,79.05,7500.0
+2026-02-02,monday,Biceps ,Hammer Curl,15.0,10.0,8.0,,"5,7.5,10",33.0,Y,79.05,7500.0
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday ,Biceps,21 exercise ,21.0,21.0,21.0,,"4.5,6.8,9.1",63.0,Y,79.05,7500.0
+2026-02-02,monday,Back,Deadlift ,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday ,Abs,Upper,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday ,Abs,Mid,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday ,Abs,Side,,,,,,0.0,Y,79.05,7500.0
+2026-02-02,monday ,Abs,Lower,,,,,,0.0,Y,79.05,7500.0
+2026-02-03,tuesday,N,N,,,,,,0.0,N,,7500.0
+2026-02-04,wednesday ,Triceps ,Extension ,20.0,20.0,20.0,15.0,,75.0,Y,,7500.0
+2026-02-05,thursday,N,N,,,,,,0.0,N,,7500.0
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,20.0,20.0,10.0,10.0,,60.0,Y,,7500.0
+2026-02-04,wednesday ,Chest,Bench Press,15.0,20.0,15.0,10.0,,60.0,Y,,7500.0
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,10.0,10.0,8.0,8.0,,36.0,Y,,7500.0
+2026-02-04,wednesday ,Chest,Fly ,15.0,15.0,10.0,8.0,,48.0,Y,,7500.0
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,15.0,15.0,15.0,11.0,,56.0,Y,,7500.0
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,12.0,10.0,12.0,10.0,,44.0,Y,,7500.0
+2026-02-06,friday,Legs,free squats ,15.0,15.0,15.0,15.0,79.75,60.0,Y,79.75,7500.0
+2026-02-06,friday,Legs,Barbell Squats,8.0,10.0,8.0,,"10,10,10",26.0,Y,79.75,7500.0
+2026-02-06,friday ,Legs,Leg Press,12.0,15.0,12.0,15.0,"25,25,25,25",54.0,Y,79.75,7500.0
+2026-02-06,friday,Legs,Leg Extension down,15.0,15.0,15.0,,"43,50,58",45.0,Y,79.75,7500.0
+2026-02-06,friday,Legs,Leg Extension Up,12.0,12.0,12.0,,"43,50,57",36.0,Y,79.75,7500.0
+2026-02-06,friday,Legs,Hip Abductor ,20.0,20.0,12.0,,"29,36,50",52.0,Y,79.75,7500.0
+2026-02-06,friday,Legs,Calf Raises,15.0,15.0,20.0,,"5,30,30",50.0,Y,79.75,7500.0
+2026-02-07,saturday,N,N,,,,,,0.0,N,,7500.0
+2026-02-08,sunday,H,H,,,,,,0.0,H,,7500.0
