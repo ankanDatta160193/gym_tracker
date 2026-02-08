@@ -1,12 +1,11 @@
-name: Gym Pipeline (Bronze → Silver → Export → Drive)
+name: Gym Pipeline (Bronze → Silver → CSV → Drive)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"   # hourly
+    - cron: "0 * * * *"   # every hour
 
 jobs:
-
   bronze:
     name: Run Bronze Layer
     runs-on: ubuntu-latest
@@ -21,15 +20,15 @@ jobs:
           curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
             -H "Authorization: Bearer $DATABRICKS_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{
-              "run_name": "attendance_bronze_refresh",
-              "tasks": [{
-                "task_key": "attendance_bronze",
-                "notebook_task": {
-                  "notebook_path": "'"$NOTEBOOK_PATH"'"
+            -d "{
+              \"run_name\": \"attendance_bronze_refresh\",
+              \"tasks\": [{
+                \"task_key\": \"attendance_bronze\",
+                \"notebook_task\": {
+                  \"notebook_path\": \"$NOTEBOOK_PATH\"
                 }
               }]
-            }'
+            }"
 
   silver:
     name: Run Silver Layer
@@ -46,15 +45,15 @@ jobs:
           curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
             -H "Authorization: Bearer $DATABRICKS_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{
-              "run_name": "gym_silver_refresh",
-              "tasks": [{
-                "task_key": "silver_layer",
-                "notebook_task": {
-                  "notebook_path": "'"$NOTEBOOK_PATH"'"
+            -d "{
+              \"run_name\": \"gym_silver_refresh\",
+              \"tasks\": [{
+                \"task_key\": \"gym_silver\",
+                \"notebook_task\": {
+                  \"notebook_path\": \"$NOTEBOOK_PATH\"
                 }
               }]
-            }'
+            }"
 
   export_and_upload:
     name: Export Silver → CSV → Google Drive
@@ -62,7 +61,7 @@ jobs:
     needs: silver
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -72,18 +71,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --upgrade pip
-          pip install \
-            databricks-sql-connector \
-            pandas \
-            google-api-python-client \
-            google-auth \
-            google-auth-oauthlib
-
-      - name: DEBUG – show repo structure
-        run: |
-          pwd
-          ls -R .
+          pip install databricks-sql-connector pandas \
+                      google-api-python-client google-auth
 
       - name: Export Silver Table to CSV
         env:
@@ -113,4 +102,4 @@ jobs:
 
       - name: Failure
         if: ${{ failure() }}
-        run: echo "Gym pipeline FAILED"
+        run: echo "Gym pipeline failed"
