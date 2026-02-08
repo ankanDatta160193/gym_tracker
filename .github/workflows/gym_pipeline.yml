@@ -1,0 +1,103 @@
+name: Gym Data Pipeline
+
+on:
+  schedule:
+    - cron: "0 * * * *"   # every hour
+  workflow_dispatch:
+
+jobs:
+  bronze:
+    name: Run Bronze Layer
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Attendance Bronze Notebook
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          NOTEBOOK_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
+        run: |
+          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "run_name": "attendance_bronze_refresh",
+            "tasks": [
+              {
+                "task_key": "attendance_bronze",
+                "notebook_task": {
+                  "notebook_path": "'"$NOTEBOOK_PATH"'"
+                }
+              }
+            ]
+          }'
+
+  silver:
+    name: Run Silver Layer
+    runs-on: ubuntu-latest
+    needs: bronze
+
+    steps:
+      - name: Trigger Silver Notebook
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          NOTEBOOK_PATH: ${{ secrets.SILVER_NOTEBOOK_PATH }}
+        run: |
+          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "run_name": "gym_silver_refresh",
+            "tasks": [
+              {
+                "task_key": "gym_silver",
+                "notebook_task": {
+                  "notebook_path": "'"$NOTEBOOK_PATH"'"
+                }
+              }
+            ]
+          }'
+
+  export_and_upload:
+    name: Export Silver → CSV → Google Drive
+    runs-on: ubuntu-latest
+    needs: silver
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install databricks-sql-connector pandas google-api-python-client google-auth google-auth-oauthlib
+
+      - name: Export Silver Table and Upload to Drive
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_WAREHOUSE_ID: ${{ secrets.DATABRICKS_WAREHOUSE_ID }}
+          GOOGLE_DRIVE_CREDENTIALS: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        run: |
+          python scripts/export_silver_to_drive.py
+
+  notify:
+    name: Notify Status
+    runs-on: ubuntu-latest
+    needs: [bronze, silver, export_and_upload]
+    if: always()
+
+    steps:
+      - name: Success
+        if: ${{ success() }}
+        run: echo "Gym bronze, silver, and export completed successfully"
+
+      - name: Failure
+        if: ${{ failure() }}
+        run: echo "Gym pipeline failed"
