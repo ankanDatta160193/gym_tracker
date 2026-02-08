@@ -1,63 +1,13 @@
-name: Gym Pipeline (Bronze → Silver → CSV → Drive)
+name: Gym Silver Export (FREE)
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"   # every hour
+    - cron: "0 * * * *"
+  workflow_dispatch:
 
 jobs:
-
-  bronze:
-    name: Run Bronze Notebook
+  export-silver:
     runs-on: ubuntu-latest
-    steps:
-      - name: Trigger Bronze
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          NOTEBOOK_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
-        run: |
-          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
-          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"run_name\": \"gym_bronze\",
-            \"tasks\": [{
-              \"task_key\": \"bronze\",
-              \"notebook_task\": {
-                \"notebook_path\": \"$NOTEBOOK_PATH\"
-              }
-            }]
-          }"
-
-  silver:
-    name: Run Silver Notebook
-    runs-on: ubuntu-latest
-    needs: bronze
-    steps:
-      - name: Trigger Silver
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          NOTEBOOK_PATH: ${{ secrets.SILVER_NOTEBOOK_PATH }}
-        run: |
-          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
-          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"run_name\": \"gym_silver\",
-            \"tasks\": [{
-              \"task_key\": \"silver\",
-              \"notebook_task\": {
-                \"notebook_path\": \"$NOTEBOOK_PATH\"
-              }
-            }]
-          }"
-
-  export_and_upload:
-    name: Export Silver → CSV → Google Drive
-    runs-on: ubuntu-latest
-    needs: silver
 
     steps:
       - name: Checkout repo
@@ -70,10 +20,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install databricks-sql-connector pandas \
-                     google-api-python-client google-auth google-auth-oauthlib
+          pip install databricks-sql-connector pandas
 
-      - name: Export Silver Table to CSV
+      - name: Export Silver table to CSV
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
@@ -81,9 +30,10 @@ jobs:
         run: |
           python scripts/export_silver_to_csv.py
 
-      - name: Upload CSV to Google Drive
-        env:
-          GOOGLE_DRIVE_CREDENTIALS: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+      - name: Commit CSV back to repo
         run: |
-          python scripts/upload_to_drive.py
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add exports/gym_silver.csv
+          git commit -m "Update silver CSV" || echo "No changes"
+          git push
