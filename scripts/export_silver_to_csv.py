@@ -1,52 +1,23 @@
 import os
-import csv
-import requests
+import pandas as pd
+from databricks import sql
 
 HOST = os.environ["DATABRICKS_HOST"]
 TOKEN = os.environ["DATABRICKS_TOKEN"]
 WAREHOUSE_ID = os.environ["DATABRICKS_WAREHOUSE_ID"]
 
-SQL = "SELECT * FROM gym_dashboard.gym.silver_gym"
+OUTPUT_PATH = "exports/gym_silver.csv"
 
-headers = {
-    "Authorization": f"Bearer {TOKEN}",
-    "Content-Type": "application/json"
-}
-
-payload = {
-    "statement": SQL,
-    "warehouse_id": WAREHOUSE_ID
-}
-
-resp = requests.post(
-    f"{HOST}/api/2.0/sql/statements",
-    headers=headers,
-    json=payload
+conn = sql.connect(
+    server_hostname=HOST.replace("https://", ""),
+    http_path=f"/sql/1.0/warehouses/{WAREHOUSE_ID}",
+    access_token=TOKEN,
 )
-resp.raise_for_status()
 
-statement_id = resp.json()["statement_id"]
+query = "SELECT * FROM silver_gym"
 
-# Poll until finished
-while True:
-    status = requests.get(
-        f"{HOST}/api/2.0/sql/statements/{statement_id}",
-        headers=headers
-    ).json()
+df = pd.read_sql(query, conn)
+os.makedirs("exports", exist_ok=True)
+df.to_csv(OUTPUT_PATH, index=False)
 
-    if status["status"]["state"] == "SUCCEEDED":
-        break
-
-# Extract results
-columns = [c["name"] for c in status["manifest"]["schema"]["columns"]]
-rows = status["result"]["data_array"]
-
-os.makedirs("out", exist_ok=True)
-csv_path = "out/gym_silver.csv"
-
-with open(csv_path, "w", newline="", encoding="utf-8") as f:
-    writer = csv.writer(f)
-    writer.writerow(columns)
-    writer.writerows(rows)
-
-print(f"CSV written to {csv_path}")
+print(f"CSV written to {OUTPUT_PATH}")
