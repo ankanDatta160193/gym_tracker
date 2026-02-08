@@ -1,5 +1,6 @@
 name: Gym Pipeline (Bronze → Silver → CSV)
-
+permissions:
+  contents: write
 on:
   workflow_dispatch:
   schedule:
