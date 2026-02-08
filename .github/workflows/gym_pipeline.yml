@@ -1,120 +1,70 @@
-name: Gym Pipeline (Bronze → Silver → Export)
+name: Gym Pipeline (Bronze → Silver → CSV)
 
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"   # hourly
 
+permissions:
+  contents: write
+
 jobs:
-# ============================================================
-# BRONZE
-# ============================================================
   bronze:
-    name: Run Bronze Layer
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Bronze Job
+      - name: Run Bronze Notebook
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          BRONZE_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
         run: |
-          RESPONSE=$(curl -s -X POST \
-            "$DATABRICKS_HOST/api/2.1/jobs/run-now" \
-            -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "job_id": BRONZE_JOB_ID
-            }')
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"run_name\": \"bronze_run\",
+            \"tasks\": [{
+              \"task_key\": \"bronze\",
+              \"notebook_task\": {
+                \"notebook_path\": \"$BRONZE_PATH\"
+              }
+            }]
+          }"
 
-          RUN_ID=$(echo "$RESPONSE" | jq -r '.run_id')
-
-          if [ "$RUN_ID" = "null" ]; then
-            echo "Bronze job failed to start"
-            exit 1
-          fi
-
-          echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
-
-      - name: Wait for Bronze Completion
-        run: |
-          while true; do
-            sleep 20
-            RESPONSE=$(curl -s \
-              "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID" \
-              -H "Authorization: Bearer $DATABRICKS_TOKEN")
-
-            STATE=$(echo "$RESPONSE" | jq -r '.state.life_cycle_state')
-            RESULT=$(echo "$RESPONSE" | jq -r '.state.result_state')
-
-            echo "Bronze state: $STATE"
-
-            if [ "$STATE" = "TERMINATED" ]; then
-              if [ "$RESULT" != "SUCCESS" ]; then
-                echo "Bronze failed"
-                exit 1
-              fi
-              break
-            fi
-          done
-
-# ============================================================
-# SILVER (depends on Bronze)
-# ============================================================
   silver:
-    name: Run Silver Layer
     runs-on: ubuntu-latest
     needs: bronze
 
     steps:
-      - name: Trigger Silver Job
+      - name: Run Silver Notebook
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          SILVER_PATH: ${{ secrets.SILVER_NOTEBOOK_PATH }}
         run: |
-          RESPONSE=$(curl -s -X POST \
-            "$DATABRICKS_HOST/api/2.1/jobs/run-now" \
-            -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-            -H "Content-Type: application/json" \
-            -d '{
-              "job_id": SILVER_JOB_ID
-            }')
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d "{
+            \"run_name\": \"silver_run\",
+            \"tasks\": [{
+              \"task_key\": \"silver\",
+              \"notebook_task\": {
+                \"notebook_path\": \"$SILVER_PATH\"
+              }
+            }]
+          }"
 
-          RUN_ID=$(echo "$RESPONSE" | jq -r '.run_id')
-
-          if [ "$RUN_ID" = "null" ]; then
-            echo "Silver job failed to start"
-            exit 1
-          fi
-
-          echo "RUN_ID=$RUN_ID" >> $GITHUB_ENV
-
-      - name: Wait for Silver Completion
-        run: |
-          while true; do
-            sleep 20
-            RESPONSE=$(curl -s \
-              "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID" \
-              -H "Authorization: Bearer $DATABRICKS_TOKEN")
-
-            STATE=$(echo "$RESPONSE" | jq -r '.state.life_cycle_state')
-            RESULT=$(echo "$RESPONSE" | jq -r '.state.result_state')
-
-            echo "Silver state: $STATE"
-
-            if [ "$STATE" = "TERMINATED" ]; then
-              if [ "$RESULT" != "SUCCESS" ]; then
-                echo "Silver failed"
-                exit 1
-              fi
-              break
-            fi
-          done
-
-# ============================================================
-# EXPORT (depends on Silver)
-# ============================================================
   export_csv:
-    name: Export Silver to CSV
     runs-on: ubuntu-latest
     needs: silver
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -123,33 +73,27 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
           pip install pandas databricks-sql-connector
 
-      - name: Export Silver Table
+      - name: Export Silver table to CSV (overwrite)
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_WAREHOUSE_ID: ${{ secrets.DATABRICKS_WAREHOUSE_ID }}
         run: |
-          python << 'EOF'
-          import pandas as pd
-          from databricks import sql
+          python scripts/export_silver_to_csv.py
 
-          conn = sql.connect(
-              server_hostname="${{ secrets.DATABRICKS_HOST }}".replace("https://", ""),
-              http_path="/sql/1.0/warehouses/${{ secrets.DATABRICKS_WAREHOUSE_ID }}",
-              access_token="${{ secrets.DATABRICKS_TOKEN }}"
-          )
-
-          df = pd.read_sql(
-              "SELECT * FROM gym_dashboard.gym.silver_gym",
-              conn
-          )
-
-          df.to_csv("exports/gym_silver.csv", index=False)
-          print("Exported silver CSV")
-          EOF
-
-      - name: Commit and push CSV (force overwrite)
+      - name: Commit & push CSV (safe)
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add exports/gym_silver.csv
-          git commit -m "Update silver CSV" || echo "No changes"
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No change in CSV. Nothing to commit."
+          else
+            git commit -m "Update silver CSV"
+            git push
+          fi
