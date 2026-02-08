@@ -1,4 +1,4 @@
-name: Gym Pipeline (Bronze + Silver → CSV)
+name: Gym Pipeline (Bronze → Silver → CSV)
 
 on:
   workflow_dispatch:
@@ -9,68 +9,35 @@ permissions:
   contents: write
 
 jobs:
-  run_pipeline:
+  bronze:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run Bronze + Silver Notebook
+      - name: Run Bronze Notebook
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          PIPELINE_NOTEBOOK_PATH: ${{ secrets.GYM_PIPELINE_NOTEBOOK_PATH }}
+          BRONZE_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
         run: |
-          RESPONSE=$(curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
           -H "Authorization: Bearer $DATABRICKS_TOKEN" \
           -H "Content-Type: application/json" \
           -d "{
-            \"run_name\": \"gym_pipeline_run\",
+            \"run_name\": \"bronze_run\",
             \"tasks\": [{
-              \"task_key\": \"pipeline\",
+              \"task_key\": \"bronze\",
               \"notebook_task\": {
-                \"notebook_path\": \"$PIPELINE_NOTEBOOK_PATH\"
+                \"notebook_path\": \"$BRONZE_PATH\"
               }
             }]
-          }")
+          }"
 
-          echo "$RESPONSE"
+ 
+  export_csv:
+    runs-on: ubuntu-latest
+    needs: bronze
 
-          RUN_ID=$(echo "$RESPONSE" | jq -r '.run_id')
-
-          if [ "$RUN_ID" = "null" ]; then
-            echo "Failed to trigger Databricks run"
-            exit 1
-          fi
-
-          echo "Triggered Databricks run_id=$RUN_ID"
-
-          echo "Waiting for Databricks run to finish..."
-
-          while true; do
-            STATUS=$(curl -s \
-              -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-              "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID" \
-              | jq -r '.state.life_cycle_state')
-
-            RESULT=$(curl -s \
-              -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-              "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID" \
-              | jq -r '.state.result_state')
-
-            echo "Status: $STATUS"
-
-            if [ "$STATUS" = "TERMINATED" ]; then
-              if [ "$RESULT" = "SUCCESS" ]; then
-                echo "Notebook completed successfully"
-                break
-              else
-                echo "Notebook failed"
-                exit 1
-              fi
-            fi
-
-            sleep 20
-          done
-
+    steps:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
