@@ -1,10 +1,12 @@
 name: Gym Pipeline (Bronze → Silver → CSV)
-permissions:
-  contents: write
+
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 * * * *"   # hourly
+
+permissions:
+  contents: write   # REQUIRED to overwrite & push CSV
 
 jobs:
   bronze:
@@ -19,15 +21,15 @@ jobs:
           curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
             -H "Authorization: Bearer $DATABRICKS_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{
-              "run_name": "bronze_run",
-              "tasks": [{
-                "task_key": "bronze",
-                "notebook_task": {
-                  "notebook_path": "'"$BRONZE_PATH"'"
+            -d "{
+              \"run_name\": \"bronze_run\",
+              \"tasks\": [{
+                \"task_key\": \"bronze\",
+                \"notebook_task\": {
+                  \"notebook_path\": \"$BRONZE_PATH\"
                 }
               }]
-            }'
+            }"
 
   silver:
     runs-on: ubuntu-latest
@@ -42,22 +44,25 @@ jobs:
           curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
             -H "Authorization: Bearer $DATABRICKS_TOKEN" \
             -H "Content-Type: application/json" \
-            -d '{
-              "run_name": "silver_run",
-              "tasks": [{
-                "task_key": "silver",
-                "notebook_task": {
-                  "notebook_path": "'"$SILVER_PATH"'"
+            -d "{
+              \"run_name\": \"silver_run\",
+              \"tasks\": [{
+                \"task_key\": \"silver\",
+                \"notebook_task\": {
+                  \"notebook_path\": \"$SILVER_PATH\"
                 }
               }]
-            }'
+            }"
 
   export_csv:
     runs-on: ubuntu-latest
     needs: silver
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo (FULL history – REQUIRED)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -66,9 +71,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install databricks-sql-connector pandas
+          pip install databricks-sql-connector pandas pyarrow
 
-      - name: Export Silver Table to CSV
+      - name: Export Silver table to CSV (OVERWRITE)
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
@@ -76,10 +81,12 @@ jobs:
         run: |
           python scripts/export_silver_to_csv.py
 
-      - name: Commit CSV
+      - name: Commit & push CSV (overwrite same file)
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add exports/gym_silver.csv
-          git commit -m "Update silver CSV" || echo "No changes"
+          git status
+          git commit -m "Overwrite silver CSV"
           git push
