@@ -31,19 +31,42 @@ jobs:
             ]
           }'
 
-  notify:
+  run-silver:
     runs-on: ubuntu-latest
     needs: [run-bronze]
+
+    steps:
+      - name: Trigger Silver Job
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          SILVER_NOTEBOOK_PATH: ${{ secrets.SILVER_NOTEBOOK_PATH }}
+        run: |
+          curl -f -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "run_name": "gym_silver_refresh",
+            "tasks": [
+              {
+                "task_key": "silver_layer",
+                "notebook_task": {
+                  "notebook_path": "'"$SILVER_NOTEBOOK_PATH"'"
+                }
+              }
+            ]
+          }'
+
+  notify:
+    runs-on: ubuntu-latest
+    needs: [run-bronze, run-silver]
     if: always()
+
     steps:
       - name: Notify Success
         if: ${{ success() }}
-        run: echo "Gym bronze pipelines succeeded"
+        run: echo "Gym bronze + silver pipelines succeeded"
 
       - name: Notify failure
-        if: failure()
-        run: echo "Attendance Bronze Refresh FAILED"
-
-      - name: Notify Failure
         if: ${{ failure() }}
-        run: echo "Gym bronze pipelines failed"
+        run: echo "Gym pipeline FAILED"
