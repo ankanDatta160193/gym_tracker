@@ -10,7 +10,7 @@ conn = sql.connect(
     access_token=os.environ["DATABRICKS_TOKEN"]
 )
 
-query = "SELECT * FROM silver_gym"
+query = "SELECT * FROM gym_dashboard.gym.silver_gym"
 
 df = pd.read_sql(query, conn)
 df.to_csv("exports/gym_silver.csv", index=False)
