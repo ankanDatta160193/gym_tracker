@@ -1,18 +1,20 @@
-import json
 import os
-from google.oauth2.service_account import Credentials
+import json
+from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
-SERVICE_JSON = json.loads(os.environ["GOOGLE_DRIVE_CREDENTIALS"])
+CSV_PATH = "out/gym_silver.csv"
 FOLDER_ID = os.environ["GOOGLE_DRIVE_FOLDER_ID"]
 
-creds = Credentials.from_service_account_info(
-    SERVICE_JSON,
-    scopes=["https://www.googleapis.com/auth/drive.file"]
+creds_dict = json.loads(os.environ["GOOGLE_DRIVE_CREDENTIALS"])
+
+credentials = service_account.Credentials.from_service_account_info(
+    creds_dict,
+    scopes=["https://www.googleapis.com/auth/drive"]
 )
 
-service = build("drive", "v3", credentials=creds)
+drive = build("drive", "v3", credentials=credentials)
 
 file_metadata = {
     "name": "gym_silver.csv",
@@ -20,15 +22,16 @@ file_metadata = {
 }
 
 media = MediaFileUpload(
-    "out/gym_silver.csv",
+    CSV_PATH,
     mimetype="text/csv",
     resumable=False
 )
 
-service.files().create(
+file = drive.files().create(
     body=file_metadata,
     media_body=media,
-    fields="id"
+    fields="id",
+    supportsAllDrives=True
 ).execute()
 
-print("Uploaded to Google Drive")
+print(f"Uploaded file ID: {file['id']}")
