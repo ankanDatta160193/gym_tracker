@@ -1,17 +1,62 @@
-name: Gym Silver Export (FREE)
+name: Gym Pipeline (Bronze → Silver → CSV)
 
 on:
-  schedule:
-    - cron: "0 * * * *"
   workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"   # hourly
 
 jobs:
-  export-silver:
+  bronze:
     runs-on: ubuntu-latest
+    steps:
+      - name: Run Bronze Notebook
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          BRONZE_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
+        run: |
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+            -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "run_name": "bronze_run",
+              "tasks": [{
+                "task_key": "bronze",
+                "notebook_task": {
+                  "notebook_path": "'"$BRONZE_PATH"'"
+                }
+              }]
+            }'
+
+  silver:
+    runs-on: ubuntu-latest
+    needs: bronze
+    steps:
+      - name: Run Silver Notebook
+        env:
+          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          SILVER_PATH: ${{ secrets.SILVER_NOTEBOOK_PATH }}
+        run: |
+          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+            -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "run_name": "silver_run",
+              "tasks": [{
+                "task_key": "silver",
+                "notebook_task": {
+                  "notebook_path": "'"$SILVER_PATH"'"
+                }
+              }]
+            }'
+
+  export_csv:
+    runs-on: ubuntu-latest
+    needs: silver
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,7 +67,7 @@ jobs:
         run: |
           pip install databricks-sql-connector pandas
 
-      - name: Export Silver table to CSV
+      - name: Export Silver Table to CSV
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
@@ -30,7 +75,7 @@ jobs:
         run: |
           python scripts/export_silver_to_csv.py
 
-      - name: Commit CSV back to repo
+      - name: Commit CSV
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
