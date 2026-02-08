@@ -1,4 +1,4 @@
-name: Gym Pipeline (Bronze → Silver → CSV)
+name: Gym Pipeline (Bronze + Silver → CSV)
 
 on:
   workflow_dispatch:
@@ -9,58 +9,68 @@ permissions:
   contents: write
 
 jobs:
-  bronze:
+  run_pipeline:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run Bronze Notebook
+      - name: Run Bronze + Silver Notebook
         env:
           DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          BRONZE_PATH: ${{ secrets.ATTENDANCE_BRONZE_NOTEBOOK_PATH }}
+          PIPELINE_NOTEBOOK_PATH: ${{ secrets.GYM_PIPELINE_NOTEBOOK_PATH }}
         run: |
-          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
+          RESPONSE=$(curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
           -H "Authorization: Bearer $DATABRICKS_TOKEN" \
           -H "Content-Type: application/json" \
           -d "{
-            \"run_name\": \"bronze_run\",
+            \"run_name\": \"gym_pipeline_run\",
             \"tasks\": [{
-              \"task_key\": \"bronze\",
+              \"task_key\": \"pipeline\",
               \"notebook_task\": {
-                \"notebook_path\": \"$BRONZE_PATH\"
+                \"notebook_path\": \"$PIPELINE_NOTEBOOK_PATH\"
               }
             }]
-          }"
+          }")
 
-  silver:
-    runs-on: ubuntu-latest
-    needs: bronze
+          echo "$RESPONSE"
 
-    steps:
-      - name: Run Silver Notebook
-        env:
-          DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
-          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
-          SILVER_PATH: ${{ secrets.SILVER_NOTEBOOK_PATH }}
-        run: |
-          curl -s -X POST "$DATABRICKS_HOST/api/2.1/jobs/runs/submit" \
-          -H "Authorization: Bearer $DATABRICKS_TOKEN" \
-          -H "Content-Type: application/json" \
-          -d "{
-            \"run_name\": \"silver_run\",
-            \"tasks\": [{
-              \"task_key\": \"silver\",
-              \"notebook_task\": {
-                \"notebook_path\": \"$SILVER_PATH\"
-              }
-            }]
-          }"
+          RUN_ID=$(echo "$RESPONSE" | jq -r '.run_id')
 
-  export_csv:
-    runs-on: ubuntu-latest
-    needs: silver
+          if [ "$RUN_ID" = "null" ]; then
+            echo "Failed to trigger Databricks run"
+            exit 1
+          fi
 
-    steps:
+          echo "Triggered Databricks run_id=$RUN_ID"
+
+          echo "Waiting for Databricks run to finish..."
+
+          while true; do
+            STATUS=$(curl -s \
+              -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+              "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID" \
+              | jq -r '.state.life_cycle_state')
+
+            RESULT=$(curl -s \
+              -H "Authorization: Bearer $DATABRICKS_TOKEN" \
+              "$DATABRICKS_HOST/api/2.1/jobs/runs/get?run_id=$RUN_ID" \
+              | jq -r '.state.result_state')
+
+            echo "Status: $STATUS"
+
+            if [ "$STATUS" = "TERMINATED" ]; then
+              if [ "$RESULT" = "SUCCESS" ]; then
+                echo "Notebook completed successfully"
+                break
+              else
+                echo "Notebook failed"
+                exit 1
+              fi
+            fi
+
+            sleep 20
+          done
+
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
