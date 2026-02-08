@@ -1,37 +1,577 @@
-Date,Day,Type,Exercise,set_1,set_2,set_3,set_4,Weight,total_reps,Present,bodyweight,fees_yearly
-2026-02-01,sunday,H,H,,,,,,0.0,H,,7500.0
-2026-02-02,monday,Back,Pullups,6.0,6.0,3.0,3.0,79.05,18.0,Y,79.05,7500.0
-2026-02-02,monday ,Back,LatPullDowns,15.0,15.0,15.0,5.0,"23,36,43,50",50.0,Y,79.05,7500.0
-2026-02-02,monday,Back ,LatPullDowns shorter grip ,15.0,8.0,8.0,5.0,"23,36,43,50",36.0,Y,79.05,7500.0
-2026-02-02,monday ,Back,Seated Row,15.0,10.0,12.0,5.0,"23,29,36,43",42.0,Y,79.05,7500.0
-2026-02-02,monday,Back,Seated Row Machine ,12.0,15.0,15.0,,"7.5,7.5,7.5",42.0,Y,79.05,7500.0
-2026-02-02,monday,Back,LatPullDowns shortest grip ,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday,Back,Seated Row Shortest grip ,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday ,Back,Bent Over Rows,15.0,15.0,15.0,,79.05,45.0,Y,79.05,7500.0
-2026-02-02,monday ,Biceps ,Bicep Curl,15.0,15.0,10.0,,"23,23,23",40.0,Y,79.05,7500.0
-2026-02-02,monday,Biceps ,Hammer Curl,15.0,10.0,8.0,,"5,7.5,10",33.0,Y,79.05,7500.0
-2026-02-02,monday,Biceps,Bicep Curl with bent bar,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday ,Biceps,21 exercise ,21.0,21.0,21.0,,"4.5,6.8,9.1",63.0,Y,79.05,7500.0
-2026-02-02,monday,Back,Deadlift ,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday ,Abs,Upper,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday ,Abs,Mid,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday ,Abs,Side,,,,,,0.0,Y,79.05,7500.0
-2026-02-02,monday ,Abs,Lower,,,,,,0.0,Y,79.05,7500.0
-2026-02-03,tuesday,N,N,,,,,,0.0,N,,7500.0
-2026-02-04,wednesday ,Triceps ,Extension ,20.0,20.0,20.0,15.0,,75.0,Y,,7500.0
-2026-02-05,thursday,N,N,,,,,,0.0,N,,7500.0
-2026-02-04,wednesday ,Triceps ,Extension From Baxk,20.0,20.0,10.0,10.0,,60.0,Y,,7500.0
-2026-02-04,wednesday ,Chest,Bench Press,15.0,20.0,15.0,10.0,,60.0,Y,,7500.0
-2026-02-04,wednesday ,Chest,Inclined Bench Press ,10.0,10.0,8.0,8.0,,36.0,Y,,7500.0
-2026-02-04,wednesday ,Chest,Fly ,15.0,15.0,10.0,8.0,,48.0,Y,,7500.0
-2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,15.0,15.0,15.0,11.0,,56.0,Y,,7500.0
-2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,12.0,10.0,12.0,10.0,,44.0,Y,,7500.0
-2026-02-06,friday,Legs,free squats ,15.0,15.0,15.0,15.0,79.75,60.0,Y,79.75,7500.0
-2026-02-06,friday,Legs,Barbell Squats,8.0,10.0,8.0,,"10,10,10",26.0,Y,79.75,7500.0
-2026-02-06,friday ,Legs,Leg Press,12.0,15.0,12.0,15.0,"25,25,25,25",54.0,Y,79.75,7500.0
-2026-02-06,friday,Legs,Leg Extension down,15.0,15.0,15.0,,"43,50,58",45.0,Y,79.75,7500.0
-2026-02-06,friday,Legs,Leg Extension Up,12.0,12.0,12.0,,"43,50,57",36.0,Y,79.75,7500.0
-2026-02-06,friday,Legs,Hip Abductor ,20.0,20.0,12.0,,"29,36,50",52.0,Y,79.75,7500.0
-2026-02-06,friday,Legs,Calf Raises,15.0,15.0,20.0,,"5,30,30",50.0,Y,79.75,7500.0
-2026-02-07,saturday,N,N,,,,,,0.0,N,,7500.0
-2026-02-08,sunday,H,H,,,,,,0.0,H,,7500.0
+Date,Day,Type,Exercise,set_no,set_weight,reps,total_reps,exercise_volume,bodyweight,fees_yearly,Present
+2026-02-01,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-01,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-02,monday,Back,Pullups,1,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,2,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,3,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,4,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,1,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,2,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,3,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,4,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,1,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,2,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,3,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,4,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,1,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,2,79.05,6.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,3,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday,Back,Pullups,4,79.05,3.0,18.0,474.3,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,1,23.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,2,36.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,3,43.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,4,50.0,5.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,1,23.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,2,36.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,3,43.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,4,50.0,5.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,1,23.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,2,36.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,3,43.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,4,50.0,5.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,1,23.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,2,36.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,3,43.0,15.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,LatPullDowns,4,50.0,5.0,50.0,1780.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,1,23.0,15.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,2,36.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,3,43.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,4,50.0,5.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,1,23.0,15.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,2,36.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,3,43.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,4,50.0,5.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,1,23.0,15.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,2,36.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,3,43.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,4,50.0,5.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,1,23.0,15.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,2,36.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,3,43.0,8.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday,Back ,LatPullDowns shorter grip ,4,50.0,5.0,36.0,1227.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,1,23.0,15.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,2,29.0,10.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,3,36.0,12.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,4,43.0,5.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,1,23.0,15.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,2,29.0,10.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,3,36.0,12.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,4,43.0,5.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,1,23.0,15.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,2,29.0,10.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,3,36.0,12.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,4,43.0,5.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,1,23.0,15.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,2,29.0,10.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,3,36.0,12.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Seated Row,4,43.0,5.0,42.0,1282.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,1,7.5,12.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,2,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,3,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,4,,,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,1,7.5,12.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,2,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,3,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,4,,,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,1,7.5,12.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,2,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,3,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,4,,,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,1,7.5,12.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,2,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,3,7.5,15.0,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Machine ,4,,,42.0,315.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,LatPullDowns shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Seated Row Shortest grip ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,1,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,2,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,3,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,4,79.05,,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,1,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,2,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,3,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,4,79.05,,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,1,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,2,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,3,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,4,79.05,,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,1,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,2,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,3,79.05,15.0,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Back,Bent Over Rows,4,79.05,,45.0,1185.75,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,1,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,2,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,3,23.0,10.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,4,,,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,1,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,2,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,3,23.0,10.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,4,,,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,1,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,2,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,3,23.0,10.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,4,,,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,1,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,2,23.0,15.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,3,23.0,10.0,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps ,Bicep Curl,4,,,40.0,920.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,1,5.0,15.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,2,7.5,10.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,3,10.0,8.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,4,,,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,1,5.0,15.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,2,7.5,10.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,3,10.0,8.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,4,,,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,1,5.0,15.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,2,7.5,10.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,3,10.0,8.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,4,,,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,1,5.0,15.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,2,7.5,10.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,3,10.0,8.0,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps ,Hammer Curl,4,,,33.0,230.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Biceps,Bicep Curl with bent bar,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,1,4.5,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,2,6.8,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,3,9.1,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,4,,,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,1,4.5,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,2,6.8,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,3,9.1,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,4,,,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,1,4.5,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,2,6.8,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,3,9.1,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,4,,,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,1,4.5,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,2,6.8,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,3,9.1,21.0,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday ,Biceps,21 exercise ,4,,,63.0,428.4,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday,Back,Deadlift ,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Upper,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Mid,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Side,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,1,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,2,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,3,,,0.0,0.0,79.05,7500.0,Y
+2026-02-02,monday ,Abs,Lower,4,,,0.0,0.0,79.05,7500.0,Y
+2026-02-03,tuesday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-03,tuesday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-04,wednesday ,Triceps ,Extension ,1,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,3,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,4,,15.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,1,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,3,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,4,,15.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,1,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,3,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,4,,15.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,1,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,3,,20.0,75.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension ,4,,15.0,75.0,0.0,,7500.0,Y
+2026-02-05,thursday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-05,thursday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,1,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,3,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,1,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,3,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,1,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,3,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,1,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,3,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Triceps ,Extension From Baxk,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,2,,20.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Bench Press,4,,10.0,60.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,1,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,3,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,4,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,1,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,3,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,4,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,1,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,3,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,4,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,1,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,3,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Inclined Bench Press ,4,,8.0,36.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,1,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,2,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,3,,10.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,4,,8.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,1,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,2,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,3,,10.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,4,,8.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,1,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,2,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,3,,10.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,4,,8.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,1,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,2,,15.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,3,,10.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Fly ,4,,8.0,48.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,1,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,2,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,3,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,4,,11.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,1,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,2,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,3,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,4,,11.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,1,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,2,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,3,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,4,,11.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,1,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,2,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,3,,15.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest,Cable Fly - Lower Chest,4,,11.0,56.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,1,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,2,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,3,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,4,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,1,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,2,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,3,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,4,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,1,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,2,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,3,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,4,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,1,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,2,,10.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,3,,12.0,44.0,0.0,,7500.0,Y
+2026-02-04,wednesday ,Chest ,Cable Fly - Upper Chest ,4,,10.0,44.0,0.0,,7500.0,Y
+2026-02-06,friday,Legs,free squats ,1,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,2,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,3,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,4,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,1,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,2,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,3,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,4,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,1,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,2,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,3,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,4,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,1,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,2,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,3,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,free squats ,4,79.75,15.0,60.0,1196.25,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,1,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,2,10.0,10.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,3,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,4,,,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,1,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,2,10.0,10.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,3,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,4,,,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,1,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,2,10.0,10.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,3,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,4,,,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,1,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,2,10.0,10.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,3,10.0,8.0,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Barbell Squats,4,,,26.0,260.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,1,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,2,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,3,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,4,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,1,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,2,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,3,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,4,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,1,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,2,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,3,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,4,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,1,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,2,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,3,25.0,12.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday ,Legs,Leg Press,4,25.0,15.0,54.0,1350.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,1,43.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,2,50.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,3,58.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,4,,,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,1,43.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,2,50.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,3,58.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,4,,,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,1,43.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,2,50.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,3,58.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,4,,,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,1,43.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,2,50.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,3,58.0,15.0,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension down,4,,,45.0,2265.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,1,43.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,2,50.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,3,57.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,4,,,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,1,43.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,2,50.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,3,57.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,4,,,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,1,43.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,2,50.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,3,57.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,4,,,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,1,43.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,2,50.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,3,57.0,12.0,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Leg Extension Up,4,,,36.0,1800.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,1,29.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,2,36.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,3,50.0,12.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,4,,,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,1,29.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,2,36.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,3,50.0,12.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,4,,,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,1,29.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,2,36.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,3,50.0,12.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,4,,,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,1,29.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,2,36.0,20.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,3,50.0,12.0,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Hip Abductor ,4,,,52.0,1900.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,1,5.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,2,30.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,3,30.0,20.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,4,,,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,1,5.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,2,30.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,3,30.0,20.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,4,,,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,1,5.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,2,30.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,3,30.0,20.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,4,,,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,1,5.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,2,30.0,15.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,3,30.0,20.0,50.0,1125.0,79.75,7500.0,Y
+2026-02-06,friday,Legs,Calf Raises,4,,,50.0,1125.0,79.75,7500.0,Y
+2026-02-07,saturday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,1,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,2,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,3,,,0.0,0.0,,7500.0,N
+2026-02-07,saturday,N,N,4,,,0.0,0.0,,7500.0,N
+2026-02-08,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,4,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,1,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,2,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,3,,,0.0,0.0,,7500.0,H
+2026-02-08,sunday,H,H,4,,,0.0,0.0,,7500.0,H
