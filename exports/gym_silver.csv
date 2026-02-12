@@ -735,115 +735,195 @@ Date,Day,Type,Exercise,set_no,set_weight,reps,total_reps,exercise_volume,bodywei
 2026-02-10,tuesday,Biceps ,21 Exercise ,2,9.1,21.0,63.0,571.2,79.95,7500.0,Y
 2026-02-10,tuesday,Biceps ,21 Exercise ,3,11.3,21.0,63.0,571.2,79.95,7500.0,Y
 2026-02-10,tuesday,Biceps ,21 Exercise ,4,,,63.0,571.2,79.95,7500.0,Y
-,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,
-,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,
-,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,
-,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,
-,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,
-,,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,4,,,28.0,0.0,,7500.0,
-,,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,4,,,28.0,0.0,,7500.0,
-,,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,4,,,28.0,0.0,,7500.0,
-,,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,
-,,Chest,Chest press,4,,,28.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,
-,,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,1,,15.0,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,2,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,3,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,4,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,1,,15.0,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,2,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,3,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,4,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,1,,15.0,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,2,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,3,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,4,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,1,,15.0,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,2,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,3,,,15.0,0.0,,7500.0,
-,,Chest,Cable Fly lower chest ,4,,,15.0,0.0,,7500.0,
+2026-02-12,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,1,,15.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,2,,12.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,3,,7.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,Flat Bench Press,4,,5.0,39.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,1,,40.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,2,,20.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,3,,10.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Triceps ,Tricep Extension ,4,,5.0,75.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Chest,inclined Bench ,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,1,,10.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,2,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,3,,5.0,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday ,Shoulder,Shoulder Press,4,,,20.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Chest press,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,3,,10.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Tricep ,Tricep Extension rope,4,,,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,3,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,3,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,3,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,2,,12.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,3,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable Fly lower chest ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,1,,12.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,3,,8.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,1,,12.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,3,,8.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,1,,12.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,3,,8.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,1,,12.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,3,,8.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Shoulder Raises,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,1,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,3,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,1,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,3,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,1,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,3,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,1,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,2,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,3,,10.0,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Shoulder ,Face Pull,4,,,30.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,1,,20.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,2,,12.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,3,,10.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,4,,,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,1,,20.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,2,,12.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,3,,10.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,4,,,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,1,,20.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,2,,12.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,3,,10.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,4,,,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,1,,20.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,2,,12.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,3,,10.0,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Triceps ,Extension Machine ,4,,,42.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,1,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,2,,10.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,3,,8.0,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest,Cable extension Upper chest,4,,,28.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,1,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,2,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,3,,11.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,4,,,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,1,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,2,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,3,,11.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,4,,,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,1,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,2,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,3,,11.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,4,,,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,1,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,2,,10.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,3,,11.0,31.0,0.0,,7500.0,Y
+2026-02-12,wednesday,Chest ,Chest Press,4,,,31.0,0.0,,7500.0,Y
