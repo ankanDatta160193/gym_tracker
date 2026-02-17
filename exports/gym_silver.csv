@@ -927,3 +927,67 @@ Date,Day,Type,Exercise,set_no,set_weight,reps,total_reps,exercise_volume,bodywei
 2026-02-12,thursday,Chest ,Chest Press,2,,10.0,31.0,0.0,,7500.0,Y
 2026-02-12,thursday,Chest ,Chest Press,3,,11.0,31.0,0.0,,7500.0,Y
 2026-02-12,thursday,Chest ,Chest Press,4,,,31.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,1,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,2,,10.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,3,,5.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,4,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,1,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,2,,10.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,3,,5.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,4,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,1,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,2,,10.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,3,,5.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,4,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,1,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,2,,10.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,3,,5.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest,Bench Press ,4,,15.0,45.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,2,,8.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,3,,9.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,2,,8.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,3,,9.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,2,,8.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,3,,9.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,4,,5.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,1,,15.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,2,,8.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,3,,9.0,37.0,0.0,,7500.0,Y
+2026-02-17,tuesday ,Chest ,Inclined Bench Press ,4,,5.0,37.0,0.0,,7500.0,Y
+,tuesday ,Chest ,Cable Fly lower ,1,,22.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,2,,15.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,3,,10.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,4,,6.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,1,,22.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,2,,15.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,3,,10.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,4,,6.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,1,,22.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,2,,15.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,3,,10.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,4,,6.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,1,,22.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,2,,15.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,3,,10.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly lower ,4,,6.0,53.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,1,,12.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,2,,8.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,3,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,4,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,1,,12.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,2,,8.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,3,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,4,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,1,,12.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,2,,8.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,3,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,4,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,1,,12.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,2,,8.0,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,3,,,20.0,0.0,,7500.0,
+,tuesday ,Chest ,Cable Fly Upper ,4,,,20.0,0.0,,7500.0,
