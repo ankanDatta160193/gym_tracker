@@ -1103,99 +1103,131 @@ Date,Day,Type,Exercise,set_no,set_weight,reps,total_reps,exercise_volume,bodywei
 2026-02-19,thursday,Back,Inverted rows,2,,10.0,35.0,0.0,,7500.0,Y
 2026-02-19,thursday,Back,Inverted rows,3,,10.0,35.0,0.0,,7500.0,Y
 2026-02-19,thursday,Back,Inverted rows,4,,,35.0,0.0,,7500.0,Y
-,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,
-,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,
-,,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,
-,,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,4,,,20.0,0.0,,7500.0,
-,,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,
-,,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,4,,,20.0,0.0,,7500.0,
-,,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,
-,,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,4,,,20.0,0.0,,7500.0,
-,,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,
-,,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,
-,,Legs,Squats,4,,,20.0,0.0,,7500.0,
-,,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,
-,,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,
-,,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,
-,,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,
-,,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,
-,,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,1,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,2,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,3,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,4,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,1,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,2,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,3,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,4,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,1,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,2,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,3,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,4,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,1,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,2,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,3,,,0.0,0.0,,7500.0,
-,,Legs ,Hip Abduction ,4,,,0.0,0.0,,7500.0,
+2026-02-21,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,1,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,2,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,3,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday ,Legs,Squats ,4,,15.0,60.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,4,,,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,4,,,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,4,,,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,1,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,2,,8.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,3,,6.0,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Squats,4,,,20.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,1,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,2,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,3,,10.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Press ,4,,12.0,44.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,1,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,2,,15.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,3,,12.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Curl,4,,6.0,45.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,1,,12.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,2,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,3,,10.0,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Leg Extension ,4,,,32.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,1,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,2,,15.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,3,,10.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,4,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,1,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,2,,15.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,3,,10.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,4,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,1,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,2,,15.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,3,,10.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,4,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,1,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,2,,15.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,3,,10.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs ,Hip Abduction ,4,,20.0,65.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,1,,16.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,3,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,4,,,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,1,,16.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,3,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,4,,,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,1,,16.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,3,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,4,,,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,1,,16.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,2,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,3,,10.0,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Hip Adduction ,4,,,36.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,1,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,2,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,3,,20.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,4,,,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,1,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,2,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,3,,20.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,4,,,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,1,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,2,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,3,,20.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,4,,,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,1,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,2,,15.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,3,,20.0,50.0,0.0,,7500.0,Y
+2026-02-21,saturday,Legs,Calf Raises,4,,,50.0,0.0,,7500.0,Y
